@@ -1,5 +1,8 @@
+
+
 .App {
   text-align: center;
+  padding-top: 120px;
 }
 
 .App-logo {
@@ -35,4 +38,15 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+#remaining-time {
+  font-size: 8vw;
+  color: limegreen;
+  font-family: 'Sawarabi Mincho';
+}
+
+#remaining-time-progress {
+  margin-top: 50px;
+  padding: 0 80px;
 }
