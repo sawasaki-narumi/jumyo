@@ -61,14 +61,16 @@ function App() {
         {remainingSecs === 0 && <div id="remaining-time">残された時間は...</div>}
         {remainingSecs < 0 && <div id="remaining-time">成仏してください</div>}
       </div>
-      <div style={{marginTop: '30px'}}>
-        あなたの誕生日: <input type="date" onChange={handleBirthdayChange} defaultValue={birthday}/>
-      </div>
-      <div>
-        {birthday && <span>寿命(年齢): <input type="number" min="1" value={ageAtDeath} onChange={handleAgeAtDeath}/></span>}
-      </div>
+      <form id="form">
+        <div style={{marginTop: '30px'}}>
+          あなたの誕生日: <input type="date" onChange={handleBirthdayChange} defaultValue={birthday}/>
+        </div>
+        <div>
+          {birthday && <span>寿命(年齢): <input type="number" min="1" value={ageAtDeath} onChange={handleAgeAtDeath}/></span>}
+        </div>
+      </form>
       {remainingSecs > 0 && <div id="remaining-time-progress">
-        <ProgressBar  completed={progress} bgColor={"limegreen"} height={"50px"}/>
+        <ProgressBar completed={progress} bgColor={"#c3d82d"} height={"50px"}/>
       </div>}
     </div>
   );
